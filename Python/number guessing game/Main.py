@@ -1,3 +1,4 @@
+from timer import start_timer, end_timer
 print("Number Guessing Game By Wyatt Stark!")
 #-----correct stuff!-and variables-----------------------------------------------------------------
 num1 = 3
@@ -15,17 +16,25 @@ easy = 1
 medium = 2
 hard = 3
 very_hard = 4
+#---------------------names-stuff---------------------------------------------------
+user = input("What is your name: ")
+user = user.strip()
+if user == "":
+          user = "null"
+print("Hello! " + user )
 #---------------------Functions----------------------------------------------------
 def start_game1():
           global  reg_counter
           reg_counter = 0
+          start = start_timer()
           global reg_points
           while True:
                     ask = (int)(input("Guess a number through 1 thru 3: "))
                     reg_counter += counter
                     if ask == (num1):
-                              print("You Beat Game 1!")
+                              print(user +" Beat Game 1!")
                               reg_points += points
+                              end_timer(start)
                               print("Your points are now: " + str(reg_points))
                               print("it took you this amount of guesses: " + str(reg_counter))
                               start_game2()
@@ -41,13 +50,15 @@ def start_game1():
 def start_game2():
           global  reg_counter
           reg_counter = 0
+          start = start_timer()
           global reg_points
           while True:
                     ask2 =(int)(input("Guess a number through 1 through 8: "))
                     reg_counter += counter
                     if ask2 == (num2):
-                              print("You Beat Game 2!")
+                              print(user +" Beat Game 2!")
                               reg_points += points
+                              end_timer(start)
                               print("Your points are now: " + str(reg_points))
                               print("it took you this amount of guesses: " + str(reg_counter))
                               start_game3()
@@ -63,13 +74,15 @@ def start_game2():
 def start_game3():
           global  reg_counter
           reg_counter = 0
+          start = start_timer()
           global reg_points
           while True:
                     ask3 =(int)(input("Guess a number through 1 through 15: "))
                     reg_counter += counter
                     if ask3 == (num3):
-                              print("You Beat Game 3!")
+                              print(user +" Beat Game 3!")
                               reg_points += points
+                              end_timer(start)
                               print("Your points are now: " + str(reg_points))
                               print("it took you this amount of guesses: " + str(reg_counter))
                               start_game4()
@@ -85,13 +98,15 @@ def start_game3():
 def start_game4():
           global  reg_counter
           reg_counter = 0
+          start = start_timer()
           global reg_points
           while True:
                     ask4 =(int)(input("Guess a number through 1 through 30: "))
                     reg_counter += counter
                     if ask4== (num4):
-                              print("You Beat Game 4!")
+                              print( user +"  Beat Game 4!")
                               reg_points += points
+                              end_timer(start)
                               print("Your final points are:  " + str(reg_points))
                               print("it took you this amount of guesses: " + str(reg_counter))
                               break
