@@ -1,8 +1,9 @@
-print("Number Game By Wyatt Stark!")
+print("Number Guessing Game By Wyatt Stark!")
 # correct stuff!
 num1 = 3
 num2 = 7
 num3 = 13
+num4 = 23
 
 #---------------------Functions----------------------------------------------------
 def start_game1():
@@ -29,7 +30,7 @@ def start_game2():
 #----------------------------------------------------------------------------------
 def start_game3():
           while True:
-                    ask3 = (int(input)("Guess a number through 1 through 15: "))
+                    ask3 =(int)(input("Guess a number through 1 through 15: "))
                     if ask3 == (num3):
                               print("You Beat Game 3!")
                               break
@@ -38,9 +39,17 @@ def start_game3():
                     elif ask3 > (num3):
                               print("Too High!")
 #----------------------------------------------------------------------------------
-
 def start_game4():
-          pass
+          while True:
+                    ask4 =(int)(input("Guess a number through 1 through 30: "))
+                    if ask4== (num4):
+                              print("You Beat Game 4!")
+                              break
+                    elif ask4 < (num4):
+                              print("Too Low")
+                    elif ask4 > (num4):
+                              print("Too High!")
+#----------------------------------------------------------------------------------
 
 def difficulty():
           pass
@@ -50,3 +59,4 @@ def difficulty():
 start_game1()
 start_game2()
 start_game3()
+start_game4()
