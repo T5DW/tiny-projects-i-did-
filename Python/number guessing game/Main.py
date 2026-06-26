@@ -4,7 +4,11 @@ num1 = 3
 num2 = 7
 num3 = 13
 num4 = 23
-
+#difficultys
+easy = 1
+medium = 2
+hard = 3
+very_hard = 4
 #---------------------Functions----------------------------------------------------
 def start_game1():
           while True:
@@ -50,12 +54,18 @@ def start_game4():
                     elif ask4 > (num4):
                               print("Too High!")
 #----------------------------------------------------------------------------------
-
 def difficulty():
-          pass
-
-
-
+           ask5 =(int)(input("What difficulty do you want to start out with 1 is easy 2 is med 3 is hard 4 is very hard pls type your number: "))
+           if ask5 == (easy):
+                     start_game1()
+           elif ask5 == (medium):
+                     start_game2()
+           elif ask5 == (hard):
+                     start_game3()
+           elif ask5 == (very_hard):
+                     start_game4()
+#----------------------------------------------------------------------------------                    
+difficulty()
 start_game1()
 start_game2()
 start_game3()
