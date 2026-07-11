@@ -1,0 +1,8 @@
+print("welcome to make your own sentence using my variables  V1!")
+word1= input("enter your first word!")
+word2= input("enter your 2nd word!")
+word3= input("enter your 3rd word!")
+word4= input("enter your 4th word!")
+end1= input("use something to end the sentence!")
+print("your sentence:")
+print( str(word1) + " " + str(word2) + " " + str(word3) + " " + str(word4) + " " + str(end1) )
